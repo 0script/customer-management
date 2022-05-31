@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Koulen&family=Lato:wght@100&family=Lobster&family=Poppins:wght@100&family=Roboto:wght@100&display=swap');
+
+*{
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Roboto', sans-serif;
+	background-color: #ebeff5;
+}
+
+#logo{}
+
+#total-orders{
+	background-color: #4cb4c7;
+}
+
+#orders-delivered{
+	background-color: #7abecc;
+}
+
+#orders-pending{
+	background-color: #7cd1c0;
+}
