@@ -15,6 +15,8 @@
 * HTML 5 Canvas
 * CSS
 * JAVA SCRIPT
+* PYTHON , DJANGO
+* MySql
 
 ##Features
 
