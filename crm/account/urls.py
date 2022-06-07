@@ -20,6 +20,7 @@ from .views import (
     customer,
     create_order,
     update_order,
+    delete_order,
     )
 
 urlpatterns = [
@@ -28,5 +29,6 @@ urlpatterns = [
     path('customer/<int:pk>', customer,name='customer'),
     path('create-order/',create_order,name='create-order'),
     path('update-order/<int:pk>',update_order,name='update-order'),
+    path('delete-order/<int:pk>',delete_order,name='delete-order'),
 
 ]

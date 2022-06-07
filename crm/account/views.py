@@ -95,4 +95,20 @@ def update_order(request,pk):
         'form':form,
     }
 
-    return render(request, template_name,context=context)   
+    return render(request, template_name,context=context)
+
+def delete_order(request,pk):
+    template_name='account/delete-order.html'
+
+    order=Order.objects.get(id=pk)
+
+    if request.method=='POST':
+        order.delete()
+        return redirect('/')
+
+
+    context={
+        'item':order
+    }
+
+    return render(request, template_name,context=context)
