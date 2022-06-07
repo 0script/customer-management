@@ -78,3 +78,21 @@ def create_order(request):
     }
 
     return render(request, template_name,context=context)
+
+def update_order(request,pk):
+    template_name='account/order-form.html'
+    
+    order=Order.objects.get(id=pk)
+    
+    form=OrderForm(instance=order)
+    if request.POST:
+        form=OrderForm(request.POST,instance=order)
+        if form.is_valid():
+            form.save()
+            return redirect('/')
+
+    context={
+        'form':form,
+    }
+
+    return render(request, template_name,context=context)   
